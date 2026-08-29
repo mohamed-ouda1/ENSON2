@@ -1877,18 +1877,38 @@ section {
         }
     }
     
-    /* Energy Flow Showcase Mobile */
+    /* Energy Flow Showcase Mobile (Visual above bullet points) */
     .simulator-section {
         padding: 60px 0;
     }
 
     .simulator-container {
-        grid-template-columns: 1fr;
-        gap: 32px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .simulator-info {
+        display: contents;
+    }
+
+    .sim-header-part {
+        order: 1;
+        width: 100%;
+    }
+
+    .simulator-visual {
+        order: 2;
+        width: 100%;
+    }
+
+    .sim-bottom-part {
+        order: 3;
+        width: 100%;
     }
 
     .flow-features-list {
-        margin: 20px 0;
+        margin: 18px 0 12px 0;
         gap: 12px;
     }
 
