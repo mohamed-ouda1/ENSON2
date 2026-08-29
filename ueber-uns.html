@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Über uns | ENSON GmbH - Moderne Energiesysteme in Hamburg</title>
+    <meta name="description" content="ENSON – Ihr kompetenter Fachbetrieb für moderne und zukunftsfähige Energiesysteme in Norddeutschland. Photovoltaik, Wallboxen, Wärmepumpen & Smart Home.">
+    <link rel="stylesheet" href="index.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="dark-theme">
+    <!-- Header -->
+    <header class="site-header" id="site-header">
+        <div class="container header-container">
+            <a href="index.html" class="logo-area" id="logo-link">
+                <img src="غامق.png" alt="ENSON Logo" class="logo-image logo-dark">
+                <img src="فاتح.png" alt="ENSON Logo" class="logo-image logo-light">
+                <span class="logo-text">ENSON <span class="logo-subtext">PV & WALLBOX</span></span>
+            </a>
+            
+            <nav class="nav-bar" id="main-nav">
+                <ul>
+                    <li><a href="ueber-uns.html" class="nav-active">Über uns</a></li>
+                    <li><a href="index.html#referenzen">Referenzen</a></li>
+                    <li><a href="index.html#faq">FAQ</a></li>
+                    <li><a href="index.html#kontakt">Kontakt</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-actions">
+                <!-- Theme Toggle -->
+                <button class="theme-toggle-btn" id="theme-toggle" aria-label="Theme umschalten">
+                    <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="4"></circle>
+                        <path d="M12 2v2"></path>
+                        <path d="M12 20v2"></path>
+                        <path d="M4.93 4.93l1.41 1.41"></path>
+                        <path d="M17.66 17.66l1.41 1.41"></path>
+                        <path d="M2 12h2"></path>
+                        <path d="M20 12h2"></path>
+                        <path d="M6.34 17.66l-1.41 1.41"></path>
+                        <path d="M19.07 4.93l-1.41 1.41"></path>
+                    </svg>
+                    <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+                    </svg>
+                </button>
+                <a href="#kontakt-bereich" class="btn btn-primary btn-header" id="header-cta">Kostenlose Beratung</a>
+                
+                <!-- Mobile Nav Toggle -->
+                <button class="mobile-menu-btn" id="mobile-menu-toggle" aria-label="Menü öffnen">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Page Hero -->
+    <section class="about-hero-section">
+        <div class="container">
+            <div class="about-hero-content text-center">
+                <span class="section-tag animate-on-scroll">WER WIR SIND</span>
+                <h1 class="about-hero-title animate-on-scroll">Ihr kompetenter Fachbetrieb für moderne Energiesysteme</h1>
+                <p class="about-hero-subtitle animate-on-scroll">
+                    ENSON – Ihr verlässlicher Spezialist für zukunftsfähige Photovoltaik-, Wallbox- und Energiesysteme in Hamburg und Norddeutschland.
+                </p>
+                
+                <div class="about-stats-grid animate-on-scroll">
+                    <div class="about-stat-item">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Regionale Betreuung</span>
+                    </div>
+                    <div class="about-stat-item">
+                        <span class="stat-number">48h</span>
+                        <span class="stat-label">Reaktionszeit</span>
+                    </div>
+                    <div class="about-stat-item">
+                        <span class="stat-number">Alles</span>
+                        <span class="stat-label">Aus einer Hand</span>
+                    </div>
+                    <div class="about-stat-item">
+                        <span class="stat-number">Premium</span>
+                        <span class="stat-label">Geprüfte Qualität</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Philosophy Section -->
+    <section class="philosophy-section">
+        <div class="container">
+            <div class="philosophy-grid">
+                <!-- Visual Showcase First (Left Column) -->
+                <div class="philosophy-visual-col animate-on-scroll">
+                    <div class="about-image-showcase">
+                        <!-- Dynamic Ambient Glow Backdrop -->
+                        <div class="about-img-glow"></div>
+                        
+                        <!-- Main Image Frame -->
+                        <div class="about-img-frame">
+                            <img src="ueber_uns.jpg" alt="ENSON Photovoltaik & Wallbox Expertise Hamburg" class="about-hero-img" loading="lazy" decoding="async">
+                        </div>
+
+                        <!-- Floating Golden Expertise Badge -->
+                        <div class="gold-expertise-badge">
+                            <div class="badge-icon-wrap">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                                </svg>
+                            </div>
+                            <div class="badge-text-wrap">
+                                <span class="badge-years">6+</span>
+                                <span class="badge-label">Jahre Expertise</span>
+                            </div>
+                        </div>
+
+                        <!-- Top Trust Chip -->
+                        <div class="about-trust-chip">
+                            <span class="trust-chip-dot"></span>
+                            <span>Zertifizierter Fachbetrieb</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text Content Column -->
+                <div class="philosophy-text-col animate-on-scroll">
+                    <span class="section-tag">UNSERE PHILOSOPHIE & MISSION</span>
+                    <h2 class="section-title">Nachhaltigkeit einfach, wirtschaftlich und zukunftssicher umsetzen</h2>
+                    
+                    <p class="philosophy-lead">
+                        Wir sind Ihr zuverlässiger Partner für moderne Energielösungen und digitale Dienstleistungen – mit klarer Mission: <strong>Nachhaltigkeit einfach, wirtschaftlich und zukunftssicher umsetzen.</strong>
+                    </p>
+                    
+                    <p class="philosophy-body">
+                        Unser Leistungsspektrum umfasst den Verkauf, die Planung, Montage und Installation innovativer Technologien im Bereich der erneuerbaren Energien – darunter <strong>Photovoltaikanlagen</strong>. Von der ersten Beratung bis zur betriebsfertigen Übergabe erhalten unsere Kunden alle Leistungen aus einer Hand – transparent, effizient und professionell.
+                    </p>
+
+                    <div class="philosophy-features">
+                        <div class="phil-feature-item">
+                            <div class="phil-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="5"></circle>
+                                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4>Photovoltaik</h4>
+                                <p>Hocheffiziente Solaranlagen</p>
+                            </div>
+                        </div>
+
+                        <div class="phil-feature-item">
+                            <div class="phil-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                    <path d="M7 21h10"></path>
+                                    <path d="M12 13v5"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4>Wallboxen</h4>
+                                <p>Intelligentes E-Laden</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why ENSON Energy Section -->
+    <section class="why-enson-section">
+        <div class="container">
+            <div class="text-center animate-on-scroll">
+                <span class="section-tag">WARUM ENSON ENERGY?</span>
+                <h2 class="section-title">Ihre Vorteile mit ENSON</h2>
+                <p class="section-description" style="margin: 0 auto 50px auto;">
+                    Profitieren Sie von erstklassiger Fachkompetenz, regionaler Nähe und durchdachten Gesamtlösungen.
+                </p>
+            </div>
+
+            <div class="why-grid">
+                <!-- Advantage 1 -->
+                <div class="why-card animate-on-scroll">
+                    <div class="why-icon-box">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                            <polyline points="9 12 11 14 15 10"></polyline>
+                        </svg>
+                    </div>
+                    <h3 class="why-title">Geprüfte Qualität</h3>
+                    <p class="why-desc">Wir stehen für höchste Standards und präzise Ausführung in jedem Projekt.</p>
+                </div>
+
+                <!-- Advantage 2 -->
+                <div class="why-card animate-on-scroll">
+                    <div class="why-icon-box">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                    </div>
+                    <h3 class="why-title">Erfahrenes Team</h3>
+                    <p class="why-desc">Ein engagiertes Team mit langjähriger Erfahrung sorgt für eine reibungslose Projektumsetzung.</p>
+                </div>
+
+                <!-- Advantage 3 -->
+                <div class="why-card animate-on-scroll">
+                    <div class="why-icon-box">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="why-title">Individuelle Beratung</h3>
+                    <p class="why-desc">Wir entwickeln gemeinsam maßgeschneiderte Lösungen für Ihre Bedürfnisse.</p>
+                </div>
+
+                <!-- Advantage 4 -->
+                <div class="why-card animate-on-scroll">
+                    <div class="why-icon-box">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                            <polyline points="2 17 12 22 22 17"></polyline>
+                            <polyline points="2 12 12 17 22 12"></polyline>
+                        </svg>
+                    </div>
+                    <h3 class="why-title">Professionelle Planung</h3>
+                    <p class="why-desc">Von der Idee bis zur Umsetzung – wir planen zuverlässig und vorausschauend.</p>
+                </div>
+
+                <!-- Advantage 5 -->
+                <div class="why-card animate-on-scroll">
+                    <div class="why-icon-box">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2v8"></path>
+                            <path d="m4.93 4.93 5.66 5.66"></path>
+                            <path d="M2 12h8"></path>
+                            <path d="m4.93 19.07 5.66-5.66"></path>
+                            <path d="M12 22v-8"></path>
+                            <path d="m19.07 19.07-5.66-5.66"></path>
+                            <path d="M22 12h-8"></path>
+                            <path d="m19.07 4.93-5.66 5.66"></path>
+                        </svg>
+                    </div>
+                    <h3 class="why-title">Nachhaltige Lösungen</h3>
+                    <p class="why-desc">Energieeffizient, ressourcenschonend und zukunftssicher.</p>
+                </div>
+
+                <!-- Advantage 6 -->
+                <div class="why-card animate-on-scroll">
+                    <div class="why-icon-box">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                        </svg>
+                    </div>
+                    <h3 class="why-title">Schneller Kundenservice</h3>
+                    <p class="why-desc">Wir sind zuverlässig erreichbar und kümmern uns um schnelle Hilfe vor Ort.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Values Section -->
+    <section class="values-section">
+        <div class="container">
+            <div class="text-center animate-on-scroll">
+                <span class="section-tag">UNSERE KERNWERTE</span>
+                <h2 class="section-title">Werte, die unser Handeln leiten</h2>
+                <p class="section-description" style="margin: 0 auto 50px auto;">
+                    Drei grundlegende Säulen bestimmen jeden Schritt unserer täglichen Arbeit.
+                </p>
+            </div>
+
+            <div class="values-grid">
+                <!-- Value 1 -->
+                <div class="value-card animate-on-scroll">
+                    <div class="value-number">01</div>
+                    <h3 class="value-title">Qualität & Präzision</h3>
+                    <p class="value-text">
+                        Wir verbauen ausschließlich geprüfte und langlebige Systeme namhafter Hersteller, um eine hohe Langlebigkeit Ihrer Anlage zu garantieren.
+                    </p>
+                </div>
+
+                <!-- Value 2 -->
+                <div class="value-card animate-on-scroll">
+                    <div class="value-number">02</div>
+                    <h3 class="value-title">Transparenz & Ehrlichkeit</h3>
+                    <p class="value-text">
+                        Keine versteckten Gebühren. Unsere Angebote sind verständliche Festpreise inklusive aller Installationsschritte und Anmeldeprozesse.
+                    </p>
+                </div>
+
+                <!-- Value 3 -->
+                <div class="value-card animate-on-scroll">
+                    <div class="value-number">03</div>
+                    <h3 class="value-title">Kundennähe</h3>
+                    <p class="value-text">
+                        Wir sind ein regionales Hamburger Unternehmen. Kurze Wege ermöglichen schnelles Handeln und persönlichen Vor-Ort-Service.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partner Section -->
+    <div class="partner-section animate-on-scroll" style="border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); padding: 40px 0;">
+        <div class="container">
+            <span class="partner-title" style="margin-bottom: 25px;">Unsere Technologiepartner</span>
+            <div class="partner-slider">
+                <div class="partner-track">
+                    <img src="لوجهات الشركاء/aiko.png" alt="Aiko Solar" loading="lazy" decoding="async">
+                    <img src="لوجهات الشركاء/alphaess.png" alt="AlphaESS" loading="lazy" decoding="async">
+                    <img src="لوجهات الشركاء/byd.png" alt="BYD" loading="lazy" decoding="async">
+                    <img src="لوجهات الشركاء/ecoflow.png" alt="EcoFlow" loading="lazy" decoding="async">
+                    <img src="لوجهات الشركاء/huawei-logo.png" alt="Huawei" loading="lazy" decoding="async">
+                    <img src="لوجهات الشركاء/sigenergy.png" alt="Sigenergy" loading="lazy" decoding="async">
+                    <img src="لوجهات الشركاء/sungrow.png" alt="Sungrow" loading="lazy" decoding="async">
+                    <img src="لوجهات الشركاء/trinasolar.png" alt="Trina Solar" loading="lazy" decoding="async">
+                    <!-- Duplicate for infinite marquee -->
+                    <img src="لوجهات الشركاء/aiko.png" alt="Aiko Solar" loading="lazy" decoding="async">
+                    <img src="لوجهات الشركاء/alphaess.png" alt="AlphaESS" loading="lazy" decoding="async">
+                    <img src="لوجهات الشركاء/byd.png" alt="BYD" loading="lazy" decoding="async">
+                    <img src="لوجهات الشركاء/ecoflow.png" alt="EcoFlow" loading="lazy" decoding="async">
+                    <img src="لوجهات الشركاء/huawei-logo.png" alt="Huawei" loading="lazy" decoding="async">
+                    <img src="لوجهات الشركاء/sigenergy.png" alt="Sigenergy" loading="lazy" decoding="async">
+                    <img src="لوجهات الشركاء/sungrow.png" alt="Sungrow" loading="lazy" decoding="async">
+                    <img src="لوجهات الشركاء/trinasolar.png" alt="Trina Solar" loading="lazy" decoding="async">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact & Map Section -->
+    <section class="about-contact-section" id="kontakt-bereich">
+        <div class="container">
+            <div class="section-header-row animate-on-scroll">
+                <div>
+                    <span class="section-tag">KONTAKT AUFNEHMEN</span>
+                    <h2 class="section-title">Persönliche Beratung innerhalb 48 Stunden</h2>
+                    <p class="section-description">
+                        Haben Sie Fragen oder möchten ein individuelles Gespräch? Rufen Sie uns direkt an oder schreiben Sie uns. Wir helfen Ihnen gerne weiter.
+                    </p>
+                </div>
+            </div>
+
+            <div class="about-contact-grid">
+                <!-- Contact Info Cards -->
+                <div class="contact-info-list animate-on-scroll">
+                    <!-- Phone 1 -->
+                    <a href="tel:+4917661892855" class="contact-card-link">
+                        <div class="contact-card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                        </div>
+                        <div class="contact-card-content">
+                            <span class="contact-label">Telefon 1</span>
+                            <span class="contact-value">+49 176 61892855</span>
+                        </div>
+                    </a>
+
+                    <!-- Phone 2 -->
+                    <a href="tel:+4917641083917" class="contact-card-link">
+                        <div class="contact-card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                        </div>
+                        <div class="contact-card-content">
+                            <span class="contact-label">Telefon 2</span>
+                            <span class="contact-value">+49 176 41083917</span>
+                        </div>
+                    </a>
+
+                    <!-- Email -->
+                    <a href="mailto:info@enson-gmbh.de" class="contact-card-link">
+                        <div class="contact-card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                        </div>
+                        <div class="contact-card-content">
+                            <span class="contact-label">E-Mail</span>
+                            <span class="contact-value">info@enson-gmbh.de</span>
+                        </div>
+                    </a>
+
+                    <!-- Address / Region -->
+                    <div class="contact-card-link" style="cursor: default;">
+                        <div class="contact-card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                        </div>
+                        <div class="contact-card-content">
+                            <span class="contact-label">Standort</span>
+                            <span class="contact-value">Enson GmbH, Hamburg</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form quick trigger -->
+                <div class="contact-form-wrapper animate-on-scroll">
+                    <h3 class="form-title">Direktanfrage senden</h3>
+                    <p class="form-subtitle">Schreiben Sie uns Ihr Anliegen – wir antworten binnen 48 Stunden.</p>
+                    
+                    <form class="lead-form" id="lead-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="about-name">Ihr Name</label>
+                                <input type="text" id="about-name" placeholder="Vor- und Nachname" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="about-phone">Telefonnummer</label>
+                                <input type="tel" id="about-phone" placeholder="Ihre Telefonnummer" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="about-email">E-Mail-Adresse</label>
+                            <input type="email" id="about-email" placeholder="name@beispiel.de" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="about-message">Ihre Nachricht / Anliegen</label>
+                            <input type="text" id="about-message" placeholder="z. B. Beratung für PV-Anlage + Wallbox" required>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-full btn-glow" style="margin-top: 10px;">Jetzt unverbindlich anfragen &rarr;</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Google Maps Embed Box -->
+            <div class="map-wrapper animate-on-scroll">
+                <div class="map-header">
+                    <div class="map-header-info">
+                        <div class="map-pin-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4>ENSON GmbH Standort</h4>
+                            <p>Hamburg, Norddeutschland</p>
+                        </div>
+                    </div>
+                    <a href="https://www.google.com/maps/place/Enson+GmbH/@53.568177,10.059916,17z/data=!3m1!4b1!4m6!3m5!1s0x47b18f0065a37ce9:0xb50726535b8d6ce!8m2!3d53.568177!4d10.059916!16s%2Fg%2F11zhnqgt80?hl=de" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="padding: 8px 18px; font-size: 13px;">
+                        In Google Maps öffnen &rarr;
+                    </a>
+                </div>
+                
+                <div class="map-frame-container">
+                    <iframe 
+                        title="ENSON GmbH Standort Hamburg auf Google Maps" 
+                        src="https://maps.google.com/maps?q=53.568177,10.059916+(Enson+GmbH)&t=&z=16&ie=UTF8&iwloc=B&output=embed" 
+                        width="100%" 
+                        height="420" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Banner Section -->
+    <section class="footer-banner-section">
+        <div class="container footer-banner-container">
+            <div class="banner-text animate-on-scroll">
+                <h3>Bereit für Ihre eigene saubere Energie?</h3>
+                <p>Lassen Sie sich unverbindlich von unserem Hamburger Expertenteam beraten.</p>
+            </div>
+            <a href="index.html#kontakt" class="btn btn-primary btn-glow animate-on-scroll">Kostenlose PV-Beratung anfordern &rarr;</a>
+        </div>
+    </section>
+
+    <!-- Site Footer -->
+    <footer class="site-footer">
+        <div class="container footer-bottom">
+            <p class="copyright">&copy; 2026 ENSON GmbH. Alle Rechte vorbehalten. Meckesallee 31, 22089 Hamburg · Energie neu gedacht.</p>
+            <div class="footer-links">
+                <a href="index.html">Startseite</a>
+                <a href="ueber-uns.html" class="nav-active">Über uns</a>
+                <a href="index.html#referenzen">Referenzen</a>
+                <a href="index.html#kontakt">Kontakt</a>
+                <a href="impressum.html">Impressum</a>
+                <a href="datenschutz.html">Datenschutz</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/4917661892855" class="whatsapp-float-btn" target="_blank" aria-label="Kontakt über WhatsApp" id="whatsapp-btn">
+        <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.963C16.79 1.98 14.317.954 11.69.954 6.254.954 1.83 5.324 1.826 10.753c-.001 1.674.452 3.3 1.311 4.755L2.125 21.03l5.522-1.876zm11.758-6.195c-.328-.163-1.94-.954-2.24-1.064-.3-.11-.518-.163-.736.163-.218.327-.845 1.064-1.036 1.282-.19.218-.382.245-.71.082-.328-.163-1.385-.509-2.637-1.623-.974-.868-1.63-1.94-1.82-2.268-.19-.328-.02-.505.144-.668.148-.146.328-.382.492-.573.164-.19.218-.327.328-.545.11-.218.055-.409-.028-.573-.082-.163-.736-1.771-1.008-2.427-.267-.641-.56-.553-.768-.564-.199-.01-.427-.012-.655-.012-.228 0-.598.085-.91.423-.312.338-1.19 1.163-1.19 2.831s1.22 3.278 1.39 3.504c.17.228 2.4 3.66 5.812 5.132.812.35 1.447.56 1.942.717.817.26 1.562.223 2.15.135.656-.098 1.94-.792 2.213-1.527.273-.736.273-1.363.19-1.5-.082-.137-.3-.218-.628-.382z"></path>
+        </svg>
+        <span class="whatsapp-tooltip">Direkt WhatsApp schreiben</span>
+    </a>
+
+    <!-- Global Success Confirmation Modal Popup -->
+    <div class="success-modal-overlay" id="success-modal" aria-hidden="true">
+        <div class="success-modal-box">
+            <button type="button" class="success-modal-x" id="modal-x-close" aria-label="Schließen">&times;</button>
+            <div class="success-modal-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+            </div>
+            <h3 class="success-modal-title">Vielen Dank für Ihre Anfrage!</h3>
+            <p class="success-modal-text">
+                Ihre Angaben wurden erfolgreich übermittelt. Ein ENSON Energieexperte prüft Ihr Vorhaben und wird sich innerhalb von <strong>48 Stunden</strong> mit Ihrem individuellen Angebot bei Ihnen melden.
+            </p>
+            <div class="success-modal-actions">
+                <button type="button" class="btn btn-primary" id="success-modal-close">Verstanden & Schließen</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="index.js"></script>
+</body>
+</html>
