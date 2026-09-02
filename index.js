@@ -6,25 +6,27 @@ document.addEventListener('DOMContentLoaded', () => {
     const themeToggle = document.getElementById('theme-toggle');
     const body = document.body;
     
-    // Check saved theme or system preference
-    const savedTheme = localStorage.getItem('theme') || 'dark';
-    setTheme(savedTheme);
-    
-    themeToggle.addEventListener('click', () => {
-        const currentTheme = body.classList.contains('dark-theme') ? 'dark' : 'light';
-        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-        setTheme(newTheme);
-    });
-    
-    function setTheme(theme) {
-        if (theme === 'dark') {
-            body.classList.remove('light-theme');
-            body.classList.add('dark-theme');
-        } else {
-            body.classList.remove('dark-theme');
-            body.classList.add('light-theme');
+    if (themeToggle) {
+        // Check saved theme or system preference
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        setTheme(savedTheme);
+        
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = body.classList.contains('dark-theme') ? 'dark' : 'light';
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            setTheme(newTheme);
+        });
+        
+        function setTheme(theme) {
+            if (theme === 'dark') {
+                body.classList.remove('light-theme');
+                body.classList.add('dark-theme');
+            } else {
+                body.classList.remove('dark-theme');
+                body.classList.add('light-theme');
+            }
+            localStorage.setItem('theme', theme);
         }
-        localStorage.setItem('theme', theme);
     }
 
     // ==========================================
@@ -32,20 +34,23 @@ document.addEventListener('DOMContentLoaded', () => {
     // ==========================================
     const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
     const mainNav = document.getElementById('main-nav');
-    const navLinks = mainNav.querySelectorAll('a');
     
-    mobileMenuToggle.addEventListener('click', () => {
-        mobileMenuToggle.classList.toggle('active');
-        mainNav.classList.toggle('active');
-    });
-    
-    // Close mobile menu when clicking nav links
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            mobileMenuToggle.classList.remove('active');
-            mainNav.classList.remove('active');
+    if (mobileMenuToggle && mainNav) {
+        const navLinks = mainNav.querySelectorAll('a');
+        
+        mobileMenuToggle.addEventListener('click', () => {
+            mobileMenuToggle.classList.toggle('active');
+            mainNav.classList.toggle('active');
         });
-    });
+        
+        // Close mobile menu when clicking nav links
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenuToggle.classList.remove('active');
+                mainNav.classList.remove('active');
+            });
+        });
+    }
 
     // ==========================================
     // 3. Live Energy Flow Simulator
@@ -180,47 +185,59 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ==========================================
-    // 4. FAQ & Privacy Accordion Logic
+    // 4. Accordion Controller Helper (DUP-01)
     // ==========================================
-    const faqTriggers = document.querySelectorAll('.faq-trigger');
-    faqTriggers.forEach(trigger => {
-        trigger.addEventListener('click', () => {
-            const faqItem = trigger.closest('.faq-item');
-            const panel = faqItem.querySelector('.faq-panel');
-            const isActive = faqItem.classList.contains('active');
-            
-            // Close all other FAQ items
-            document.querySelectorAll('.faq-item').forEach(item => {
-                item.classList.remove('active');
-                item.querySelector('.faq-panel').style.maxHeight = null;
+    function setupAccordion({ triggerSelector, itemSelector, panelSelector, isExclusive = true, onToggle = null }) {
+        const triggers = document.querySelectorAll(triggerSelector);
+        if (!triggers.length) return;
+
+        triggers.forEach(trigger => {
+            trigger.addEventListener('click', () => {
+                const currentItem = trigger.closest(itemSelector);
+                if (!currentItem) return;
+                const panel = currentItem.querySelector(panelSelector);
+                const isActive = currentItem.classList.contains('active');
+
+                if (isExclusive) {
+                    document.querySelectorAll(itemSelector).forEach(item => {
+                        item.classList.remove('active');
+                        const p = item.querySelector(panelSelector);
+                        if (p) p.style.maxHeight = null;
+                        const t = item.querySelector(triggerSelector);
+                        if (t && onToggle) onToggle(t, false);
+                    });
+                }
+
+                if (isActive) {
+                    currentItem.classList.remove('active');
+                    if (panel) panel.style.maxHeight = null;
+                    if (onToggle) onToggle(trigger, false);
+                } else {
+                    currentItem.classList.add('active');
+                    if (panel) panel.style.maxHeight = panel.scrollHeight + "px";
+                    if (onToggle) onToggle(trigger, true);
+                }
             });
-            
-            // Toggle current item
-            if (!isActive) {
-                faqItem.classList.add('active');
-                panel.style.maxHeight = panel.scrollHeight + "px";
-            }
         });
+    }
+
+    // FAQ Accordion (Exclusive single open)
+    setupAccordion({
+        triggerSelector: '.faq-trigger',
+        itemSelector: '.faq-item',
+        panelSelector: '.faq-panel',
+        isExclusive: true
     });
 
-    // Privacy (Datenschutz) Interactive Cards Logic with Golden Glow
-    const privacyTriggers = document.querySelectorAll('.privacy-trigger');
-    privacyTriggers.forEach(trigger => {
-        trigger.addEventListener('click', () => {
-            const cardItem = trigger.closest('.privacy-card-item');
-            const panel = cardItem.querySelector('.privacy-panel');
-            const isActive = cardItem.classList.contains('active');
-            
-            if (isActive) {
-                cardItem.classList.remove('active');
-                trigger.setAttribute('aria-expanded', 'false');
-                panel.style.maxHeight = null;
-            } else {
-                cardItem.classList.add('active');
-                trigger.setAttribute('aria-expanded', 'true');
-                panel.style.maxHeight = panel.scrollHeight + "px";
-            }
-        });
+    // Privacy (Datenschutz) Interactive Cards Accordion (Independent toggle)
+    setupAccordion({
+        triggerSelector: '.privacy-trigger',
+        itemSelector: '.privacy-card-item',
+        panelSelector: '.privacy-panel',
+        isExclusive: false,
+        onToggle: (trigger, isOpening) => {
+            trigger.setAttribute('aria-expanded', isOpening ? 'true' : 'false');
+        }
     });
 
     // Initialize open height for already active privacy cards on page load
@@ -233,23 +250,25 @@ document.addEventListener('DOMContentLoaded', () => {
     // ==========================================
     const animateElements = document.querySelectorAll('.animate-on-scroll');
     
-    const observerOptions = {
-        root: null, // viewport
-        rootMargin: '0px',
-        threshold: 0.15 // trigger when 15% of element is visible
-    };
-    
-    const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                // Unobserve once animated
-                observer.unobserve(entry.target);
-            }
-        });
-    }, observerOptions);
-    
-    animateElements.forEach(el => observer.observe(el));
+    if (animateElements.length > 0) {
+        const observerOptions = {
+            root: null, // viewport
+            rootMargin: '0px',
+            threshold: 0.15 // trigger when 15% of element is visible
+        };
+        
+        const observer = new IntersectionObserver((entries, obs) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    // Unobserve once animated
+                    obs.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+        
+        animateElements.forEach(el => observer.observe(el));
+    }
 
     // ==========================================
     // 6. Global Success Confirmation Modal Logic
@@ -283,7 +302,35 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ==========================================
-    // 7. Online Check Multi-step Questionnaire Logic
+    // 7. Form Submission Loading State Helper (DUP-02)
+    // ==========================================
+    function handleFormSubmitState(form, onComplete) {
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const originalText = submitBtn ? submitBtn.innerHTML : '';
+            
+            if (submitBtn) {
+                submitBtn.disabled = true;
+                submitBtn.innerHTML = 'Wird gesendet...';
+            }
+            
+            setTimeout(() => {
+                if (submitBtn) {
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = originalText;
+                }
+                form.reset();
+                if (typeof onComplete === 'function') {
+                    onComplete();
+                }
+                openSuccessModal();
+            }, 800);
+        });
+    }
+
+    // ==========================================
+    // 8. Online Check Multi-step Questionnaire Logic
     // ==========================================
     const wizardForm = document.getElementById('online-check-form');
     if (wizardForm) {
@@ -298,6 +345,7 @@ document.addEventListener('DOMContentLoaded', () => {
         wizardForm.querySelectorAll('.option-card').forEach(card => {
             card.addEventListener('click', () => {
                 const parentList = card.closest('.option-cards-list');
+                if (!parentList) return;
                 parentList.querySelectorAll('.option-card').forEach(c => c.classList.remove('active'));
                 card.classList.add('active');
                 const radio = card.querySelector('input[type="radio"]');
@@ -308,7 +356,7 @@ document.addEventListener('DOMContentLoaded', () => {
         function updateWizardUI() {
             // Update steps visibility
             steps.forEach(step => {
-                const stepNum = parseInt(step.getAttribute('data-step'));
+                const stepNum = parseInt(step.getAttribute('data-step'), 10);
                 if (stepNum === currentStep) {
                     step.classList.add('active');
                 } else {
@@ -343,50 +391,21 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
 
-        // Submit form at Step 5
-        wizardForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const submitBtn = wizardForm.querySelector('button[type="submit"]');
-            const origText = submitBtn.innerHTML;
-            submitBtn.disabled = true;
-            submitBtn.innerHTML = 'Wird gesendet...';
-
-            setTimeout(() => {
-                submitBtn.disabled = false;
-                submitBtn.innerHTML = origText;
-                wizardForm.reset();
-                currentStep = 1;
-                updateWizardUI();
-                openSuccessModal();
-            }, 800);
+        // Submit form at Step 5 using shared helper
+        handleFormSubmitState(wizardForm, () => {
+            currentStep = 1;
+            updateWizardUI();
         });
     }
 
     // ==========================================
-    // 8. Lead & Contact Forms Handlers
+    // 9. Lead & Contact Forms Handlers
     // ==========================================
     const allLeadForms = document.querySelectorAll('#lead-form, .about-lead-form');
     allLeadForms.forEach(form => {
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const submitBtn = form.querySelector('button[type="submit"]');
-            const originalText = submitBtn ? submitBtn.innerHTML : '';
-            
-            if (submitBtn) {
-                submitBtn.disabled = true;
-                submitBtn.innerHTML = 'Wird gesendet...';
-            }
-            
-            setTimeout(() => {
-                if (submitBtn) {
-                    submitBtn.disabled = false;
-                    submitBtn.innerHTML = originalText;
-                }
-                form.reset();
-                openSuccessModal();
-            }, 800);
-        });
+        // Skip wizardForm if it shares an ID
+        if (form !== wizardForm) {
+            handleFormSubmitState(form);
+        }
     });
 });
-
-

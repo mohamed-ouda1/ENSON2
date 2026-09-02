@@ -15,9 +15,9 @@
     <!-- Header -->
     <header class="site-header" id="site-header">
         <div class="container header-container">
-            <a href="#" class="logo-area" id="logo-link">
-                <img src="غامق.png" alt="ENSON Logo" class="logo-image logo-dark">
-                <img src="فاتح.png" alt="ENSON Logo" class="logo-image logo-light">
+            <a href="index.html" class="logo-area" id="logo-link">
+                <img src="logo-dark.png" alt="ENSON Logo" class="logo-image logo-dark">
+                <img src="logo-light.png" alt="ENSON Logo" class="logo-image logo-light">
                 <span class="logo-text">ENSON <span class="logo-subtext">PV & WALLBOX</span></span>
             </a>
             
@@ -63,7 +63,7 @@
     <!-- Hero Section -->
     <section class="hero-section" id="hero">
         <div class="video-bg-container">
-            <video class="video-bg" src="فيديو الخلفيه.mp4" autoplay loop muted playsinline preload="metadata"></video>
+            <video class="video-bg" src="hero-video.mp4" autoplay loop muted playsinline preload="metadata"></video>
             <div class="video-overlay"></div>
         </div>
         
@@ -429,29 +429,29 @@
                         <div class="wizard-inputs-grid">
                             <div class="form-group">
                                 <label for="wizard-name">Vor- & Nachname *</label>
-                                <input type="text" id="wizard-name" required placeholder="Max Mustermann">
+                                <input type="text" id="wizard-name" name="name" required placeholder="Max Mustermann">
                             </div>
                             
                             <div class="form-group">
                                 <label for="wizard-phone">Telefonnummer *</label>
-                                <input type="tel" id="wizard-phone" required placeholder="+49 176 1234567">
+                                <input type="tel" id="wizard-phone" name="phone" required placeholder="+49 176 1234567">
                             </div>
 
                             <div class="form-group">
                                 <label for="wizard-email">E-Mail-Adresse *</label>
-                                <input type="email" id="wizard-email" required placeholder="max@beispiel.de">
+                                <input type="email" id="wizard-email" name="email" required placeholder="max@beispiel.de">
                             </div>
 
                             <div class="form-group">
                                 <label for="wizard-location">Postleitzahl / Ort *</label>
-                                <input type="text" id="wizard-location" required placeholder="22089 Hamburg">
+                                <input type="text" id="wizard-location" name="location" required placeholder="22089 Hamburg">
                             </div>
                         </div>
 
                         <div class="form-group-checkbox">
                             <label class="checkbox-label">
-                                <input type="checkbox" id="wizard-privacy" required>
-                                <span>Ich stimme der Verarbeitung meiner Daten zur Angebotserstellung gemäß der <a href="datenschutz.html" target="_blank" class="legal-link">Datenschutzerklärung</a> zu.</span>
+                                <input type="checkbox" id="wizard-privacy" name="privacy_accepted" required>
+                                <span>Ich stimme der Verarbeitung meiner Daten zur Angebotserstellung gemäß der <a href="datenschutz.html" target="_blank" rel="noopener noreferrer" class="legal-link">Datenschutzerklärung</a> zu.</span>
                             </label>
                         </div>
 
@@ -501,7 +501,7 @@
                     
                     <!-- Main Energy Flow Image Container -->
                     <div class="energy-image-wrapper">
-                        <img src="تدفق الطاقه.png" alt="ENSON Live-Energiefluss Visualisierung" class="energy-flow-img" loading="lazy" decoding="async">
+                        <img src="energiefluss.png" alt="ENSON Live-Energiefluss Visualisierung" class="energy-flow-img" loading="lazy" decoding="async">
                         
                         <!-- Animated Energy Glowing Streams & Scan Beam -->
                         <div class="energy-glow-beam"></div>
@@ -626,7 +626,7 @@
                 <!-- Project 1 -->
                 <div class="reference-card animate-on-scroll">
                     <div class="ref-img-wrapper">
-                        <img src="صور مراجع/enson-pv-projekt-hamburg-02.jpg" alt="PV-Anlage + Wallbox 10.8 kWp" class="ref-img" loading="lazy" decoding="async">
+                        <img src="referenzen/enson-pv-projekt-hamburg-02.jpg" alt="PV-Anlage + Wallbox 10.8 kWp" class="ref-img" loading="lazy" decoding="async">
                     </div>
                     <div class="ref-info">
                         <h3 class="ref-title">PV-Anlage + Wallbox</h3>
@@ -637,7 +637,7 @@
                 <!-- Project 2 -->
                 <div class="reference-card animate-on-scroll">
                     <div class="ref-img-wrapper">
-                        <img src="صور مراجع/photovoltaik-hamburg-projekt-02.jpg" alt="PV-Anlage + Wallbox 8.6 kWp" class="ref-img" loading="lazy" decoding="async">
+                        <img src="referenzen/photovoltaik-hamburg-projekt-02.jpg" alt="PV-Anlage + Wallbox 8.6 kWp" class="ref-img" loading="lazy" decoding="async">
                     </div>
                     <div class="ref-info">
                         <h3 class="ref-title">PV-Anlage + Wallbox</h3>
@@ -648,7 +648,7 @@
                 <!-- Project 3 -->
                 <div class="reference-card animate-on-scroll">
                     <div class="ref-img-wrapper">
-                        <img src="صور مراجع/pv-referenz-hamburg-01.jpg" alt="PV-Anlage + Wallbox 13.2 kWp" class="ref-img" loading="lazy" decoding="async">
+                        <img src="referenzen/pv-referenz-hamburg-01.jpg" alt="PV-Anlage + Wallbox 13.2 kWp" class="ref-img" loading="lazy" decoding="async">
                     </div>
                     <div class="ref-info">
                         <h3 class="ref-title">PV-Anlage + Wallbox</h3>
@@ -659,7 +659,7 @@
                 <!-- Project 4 -->
                 <div class="reference-card animate-on-scroll">
                     <div class="ref-img-wrapper">
-                        <img src="صور مراجع/pv-installation-hamburg-eigenheim-02.jpg" alt="PV-Anlage + Wallbox 9.6 kWp" class="ref-img" loading="lazy" decoding="async">
+                        <img src="referenzen/pv-installation-hamburg-eigenheim-02.jpg" alt="PV-Anlage + Wallbox 9.6 kWp" class="ref-img" loading="lazy" decoding="async">
                     </div>
                     <div class="ref-info">
                         <h3 class="ref-title">PV-Anlage + Wallbox</h3>
@@ -673,23 +673,23 @@
                 <span class="partner-title">Unsere Technologiepartner</span>
                 <div class="partner-slider">
                     <div class="partner-track">
-                        <img src="لوجهات الشركاء/aiko.png" alt="Aiko Solar" loading="lazy" decoding="async">
-                        <img src="لوجهات الشركاء/alphaess.png" alt="AlphaESS" loading="lazy" decoding="async">
-                        <img src="لوجهات الشركاء/byd.png" alt="BYD" loading="lazy" decoding="async">
-                        <img src="لوجهات الشركاء/ecoflow.png" alt="EcoFlow" loading="lazy" decoding="async">
-                        <img src="لوجهات الشركاء/huawei-logo.png" alt="Huawei" loading="lazy" decoding="async">
-                        <img src="لوجهات الشركاء/sigenergy.png" alt="Sigenergy" loading="lazy" decoding="async">
-                        <img src="لوجهات الشركاء/sungrow.png" alt="Sungrow" loading="lazy" decoding="async">
-                        <img src="لوجهات الشركاء/trinasolar.png" alt="Trina Solar" loading="lazy" decoding="async">
+                        <img src="partner-logos/aiko.png" alt="Aiko Solar" loading="lazy" decoding="async">
+                        <img src="partner-logos/alphaess.png" alt="AlphaESS" loading="lazy" decoding="async">
+                        <img src="partner-logos/byd.png" alt="BYD" loading="lazy" decoding="async">
+                        <img src="partner-logos/ecoflow.png" alt="EcoFlow" loading="lazy" decoding="async">
+                        <img src="partner-logos/huawei-logo.png" alt="Huawei" loading="lazy" decoding="async">
+                        <img src="partner-logos/sigenergy.png" alt="Sigenergy" loading="lazy" decoding="async">
+                        <img src="partner-logos/sungrow.png" alt="Sungrow" loading="lazy" decoding="async">
+                        <img src="partner-logos/trinasolar.png" alt="Trina Solar" loading="lazy" decoding="async">
                         <!-- Repeated for infinite scroll -->
-                        <img src="لوجهات الشركاء/aiko.png" alt="Aiko Solar" loading="lazy" decoding="async">
-                        <img src="لوجهات الشركاء/alphaess.png" alt="AlphaESS" loading="lazy" decoding="async">
-                        <img src="لوجهات الشركاء/byd.png" alt="BYD" loading="lazy" decoding="async">
-                        <img src="لوجهات الشركاء/ecoflow.png" alt="EcoFlow" loading="lazy" decoding="async">
-                        <img src="لوجهات الشركاء/huawei-logo.png" alt="Huawei" loading="lazy" decoding="async">
-                        <img src="لوجهات الشركاء/sigenergy.png" alt="Sigenergy" loading="lazy" decoding="async">
-                        <img src="لوجهات الشركاء/sungrow.png" alt="Sungrow" loading="lazy" decoding="async">
-                        <img src="لوجهات الشركاء/trinasolar.png" alt="Trina Solar" loading="lazy" decoding="async">
+                        <img src="partner-logos/aiko.png" alt="Aiko Solar" loading="lazy" decoding="async">
+                        <img src="partner-logos/alphaess.png" alt="AlphaESS" loading="lazy" decoding="async">
+                        <img src="partner-logos/byd.png" alt="BYD" loading="lazy" decoding="async">
+                        <img src="partner-logos/ecoflow.png" alt="EcoFlow" loading="lazy" decoding="async">
+                        <img src="partner-logos/huawei-logo.png" alt="Huawei" loading="lazy" decoding="async">
+                        <img src="partner-logos/sigenergy.png" alt="Sigenergy" loading="lazy" decoding="async">
+                        <img src="partner-logos/sungrow.png" alt="Sungrow" loading="lazy" decoding="async">
+                        <img src="partner-logos/trinasolar.png" alt="Trina Solar" loading="lazy" decoding="async">
                     </div>
                 </div>
             </div>
@@ -840,33 +840,33 @@
                     <div class="form-row">
                         <div class="form-group">
                             <label for="firstname">Vorname</label>
-                            <input type="text" id="firstname" placeholder="Ihr Vorname" required>
+                            <input type="text" id="firstname" name="firstname" placeholder="Ihr Vorname" required>
                         </div>
                         <div class="form-group">
                             <label for="lastname">Nachname</label>
-                            <input type="text" id="lastname" placeholder="Ihr Nachname" required>
+                            <input type="text" id="lastname" name="lastname" placeholder="Ihr Nachname" required>
                         </div>
                     </div>
                     
                     <div class="form-row">
                         <div class="form-group">
                             <label for="phone">Telefon</label>
-                            <input type="tel" id="phone" placeholder="Ihre Telefonnummer" required>
+                            <input type="tel" id="phone" name="phone" placeholder="Ihre Telefonnummer" required>
                         </div>
                         <div class="form-group">
                             <label for="email">E-Mail</label>
-                            <input type="email" id="email" placeholder="Ihre E-Mail-Adresse" required>
+                            <input type="email" id="email" name="email" placeholder="Ihre E-Mail-Adresse" required>
                         </div>
                     </div>
                     
                     <div class="form-group">
                         <label for="zip">PLZ</label>
-                        <input type="text" id="zip" placeholder="Ihre Postleitzahl" required>
+                        <input type="text" id="zip" name="zip" placeholder="Ihre Postleitzahl" required>
                     </div>
 
                     <div class="form-group">
                         <label for="message">Ihre Nachricht / Erzählen Sie uns von Ihrem Vorhaben</label>
-                        <textarea id="message" rows="4" placeholder="Beschreiben Sie kurz Ihr Anliegen oder Ihre Wünsche..." required></textarea>
+                        <textarea id="message" name="message" rows="4" placeholder="Beschreiben Sie kurz Ihr Anliegen oder Ihre Wünsche..." required></textarea>
                     </div>
                     
                     <button type="submit" class="btn btn-primary btn-full btn-glow" style="margin-top: 15px;">Kostenlose Beratung anfordern &rarr;</button>
@@ -980,7 +980,7 @@
     </footer>
 
     <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/4917661892855" class="whatsapp-float-btn" target="_blank" aria-label="Kontakt über WhatsApp" id="whatsapp-btn">
+    <a href="https://wa.me/4917661892855" class="whatsapp-float-btn" target="_blank" rel="noopener noreferrer" aria-label="Kontakt über WhatsApp" id="whatsapp-btn">
         <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor">
             <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.963C16.79 1.98 14.317.954 11.69.954 6.254.954 1.83 5.324 1.826 10.753c-.001 1.674.452 3.3 1.311 4.755L2.125 21.03l5.522-1.876zm11.758-6.195c-.328-.163-1.94-.954-2.24-1.064-.3-.11-.518-.163-.736.163-.218.327-.845 1.064-1.036 1.282-.19.218-.382.245-.71.082-.328-.163-1.385-.509-2.637-1.623-.974-.868-1.63-1.94-1.82-2.268-.19-.328-.02-.505.144-.668.148-.146.328-.382.492-.573.164-.19.218-.327.328-.545.11-.218.055-.409-.028-.573-.082-.163-.736-1.771-1.008-2.427-.267-.641-.56-.553-.768-.564-.199-.01-.427-.012-.655-.012-.228 0-.598.085-.91.423-.312.338-1.19 1.163-1.19 2.831s1.22 3.278 1.39 3.504c.17.228 2.4 3.66 5.812 5.132.812.35 1.447.56 1.942.717.817.26 1.562.223 2.15.135.656-.098 1.94-.792 2.213-1.527.273-.736.273-1.363.19-1.5-.082-.137-.3-.218-.628-.382z"></path>
         </svg>
