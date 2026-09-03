@@ -6,18 +6,20 @@
     <title>ENSON PV & Wallbox - Photovoltaik aus einer Hand</title>
     <meta name="description" content="Erzeugen Sie Ihren eigenen Solarstrom und laden Sie Ihr E-Auto mit Ihrer eigenen Energie. Individuelle PV- & Wallbox-Systeme in Hamburg.">
     <link rel="stylesheet" href="index.css">
-    <!-- Google Fonts -->
+    <!-- Preload Hero Poster for Instant LCP -->
+    <link rel="preload" href="hero-poster.webp" as="image" type="image/webp">
+    <!-- Google Fonts (Optimized Weights) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body class="dark-theme">
     <!-- Header -->
     <header class="site-header" id="site-header">
         <div class="container header-container">
             <a href="index.html" class="logo-area" id="logo-link">
-                <img src="logo-dark.png" alt="ENSON Logo" class="logo-image logo-dark">
-                <img src="logo-light.png" alt="ENSON Logo" class="logo-image logo-light">
+                <img src="logo-dark.webp" alt="ENSON Logo" class="logo-image logo-dark" width="600" height="290">
+                <img src="logo-light.webp" alt="ENSON Logo" class="logo-image logo-light" width="600" height="271">
                 <span class="logo-text">ENSON <span class="logo-subtext">PV & WALLBOX</span></span>
             </a>
             
@@ -63,7 +65,10 @@
     <!-- Hero Section -->
     <section class="hero-section" id="hero">
         <div class="video-bg-container">
-            <video class="video-bg" src="hero-video.mp4" autoplay loop muted playsinline preload="metadata"></video>
+            <video class="video-bg" autoplay muted loop playsinline preload="metadata" poster="hero-poster.webp" width="1920" height="1080">
+                <source src="hero-video.webm" type="video/webm">
+                <source src="hero-video.mp4" type="video/mp4">
+            </video>
             <div class="video-overlay"></div>
         </div>
         
@@ -501,7 +506,7 @@
                     
                     <!-- Main Energy Flow Image Container -->
                     <div class="energy-image-wrapper">
-                        <img src="energiefluss.png" alt="ENSON Live-Energiefluss Visualisierung" class="energy-flow-img" loading="lazy" decoding="async">
+                        <img src="energiefluss.webp" alt="ENSON Live-Energiefluss Visualisierung" class="energy-flow-img" loading="lazy" decoding="async" width="1600" height="665">
                         
                         <!-- Animated Energy Glowing Streams & Scan Beam -->
                         <div class="energy-glow-beam"></div>
@@ -626,7 +631,7 @@
                 <!-- Project 1 -->
                 <div class="reference-card animate-on-scroll">
                     <div class="ref-img-wrapper">
-                        <img src="referenzen/enson-pv-projekt-hamburg-02.jpg" alt="PV-Anlage + Wallbox 10.8 kWp" class="ref-img" loading="lazy" decoding="async">
+                        <img src="referenzen/enson-pv-projekt-hamburg-02.webp" alt="PV-Anlage + Wallbox 10.8 kWp" class="ref-img" loading="lazy" decoding="async" width="1000" height="1333">
                     </div>
                     <div class="ref-info">
                         <h3 class="ref-title">PV-Anlage + Wallbox</h3>
@@ -637,7 +642,7 @@
                 <!-- Project 2 -->
                 <div class="reference-card animate-on-scroll">
                     <div class="ref-img-wrapper">
-                        <img src="referenzen/photovoltaik-hamburg-projekt-02.jpg" alt="PV-Anlage + Wallbox 8.6 kWp" class="ref-img" loading="lazy" decoding="async">
+                        <img src="referenzen/photovoltaik-hamburg-projekt-02.webp" alt="PV-Anlage + Wallbox 8.6 kWp" class="ref-img" loading="lazy" decoding="async" width="1000" height="1333">
                     </div>
                     <div class="ref-info">
                         <h3 class="ref-title">PV-Anlage + Wallbox</h3>
@@ -648,7 +653,7 @@
                 <!-- Project 3 -->
                 <div class="reference-card animate-on-scroll">
                     <div class="ref-img-wrapper">
-                        <img src="referenzen/pv-referenz-hamburg-01.jpg" alt="PV-Anlage + Wallbox 13.2 kWp" class="ref-img" loading="lazy" decoding="async">
+                        <img src="referenzen/pv-referenz-hamburg-01.webp" alt="PV-Anlage + Wallbox 13.2 kWp" class="ref-img" loading="lazy" decoding="async" width="1000" height="1333">
                     </div>
                     <div class="ref-info">
                         <h3 class="ref-title">PV-Anlage + Wallbox</h3>
@@ -659,7 +664,7 @@
                 <!-- Project 4 -->
                 <div class="reference-card animate-on-scroll">
                     <div class="ref-img-wrapper">
-                        <img src="referenzen/pv-installation-hamburg-eigenheim-02.jpg" alt="PV-Anlage + Wallbox 9.6 kWp" class="ref-img" loading="lazy" decoding="async">
+                        <img src="referenzen/pv-installation-hamburg-eigenheim-02.webp" alt="PV-Anlage + Wallbox 9.6 kWp" class="ref-img" loading="lazy" decoding="async" width="1000" height="1333">
                     </div>
                     <div class="ref-info">
                         <h3 class="ref-title">PV-Anlage + Wallbox</h3>
@@ -673,23 +678,23 @@
                 <span class="partner-title">Unsere Technologiepartner</span>
                 <div class="partner-slider">
                     <div class="partner-track">
-                        <img src="partner-logos/aiko.png" alt="Aiko Solar" loading="lazy" decoding="async">
-                        <img src="partner-logos/alphaess.png" alt="AlphaESS" loading="lazy" decoding="async">
-                        <img src="partner-logos/byd.png" alt="BYD" loading="lazy" decoding="async">
-                        <img src="partner-logos/ecoflow.png" alt="EcoFlow" loading="lazy" decoding="async">
-                        <img src="partner-logos/huawei-logo.png" alt="Huawei" loading="lazy" decoding="async">
-                        <img src="partner-logos/sigenergy.png" alt="Sigenergy" loading="lazy" decoding="async">
-                        <img src="partner-logos/sungrow.png" alt="Sungrow" loading="lazy" decoding="async">
-                        <img src="partner-logos/trinasolar.png" alt="Trina Solar" loading="lazy" decoding="async">
+                        <img src="partner-logos/aiko.webp" alt="Aiko Solar" loading="lazy" decoding="async" width="398" height="398">
+                        <img src="partner-logos/alphaess.webp" alt="AlphaESS" loading="lazy" decoding="async" width="398" height="398">
+                        <img src="partner-logos/byd.webp" alt="BYD" loading="lazy" decoding="async" width="398" height="398">
+                        <img src="partner-logos/ecoflow.webp" alt="EcoFlow" loading="lazy" decoding="async" width="400" height="400">
+                        <img src="partner-logos/huawei-logo.webp" alt="Huawei" loading="lazy" decoding="async" width="398" height="398">
+                        <img src="partner-logos/sigenergy.webp" alt="Sigenergy" loading="lazy" decoding="async" width="400" height="400">
+                        <img src="partner-logos/sungrow.webp" alt="Sungrow" loading="lazy" decoding="async" width="400" height="400">
+                        <img src="partner-logos/trinasolar.webp" alt="Trina Solar" loading="lazy" decoding="async" width="398" height="398">
                         <!-- Repeated for infinite scroll -->
-                        <img src="partner-logos/aiko.png" alt="Aiko Solar" loading="lazy" decoding="async">
-                        <img src="partner-logos/alphaess.png" alt="AlphaESS" loading="lazy" decoding="async">
-                        <img src="partner-logos/byd.png" alt="BYD" loading="lazy" decoding="async">
-                        <img src="partner-logos/ecoflow.png" alt="EcoFlow" loading="lazy" decoding="async">
-                        <img src="partner-logos/huawei-logo.png" alt="Huawei" loading="lazy" decoding="async">
-                        <img src="partner-logos/sigenergy.png" alt="Sigenergy" loading="lazy" decoding="async">
-                        <img src="partner-logos/sungrow.png" alt="Sungrow" loading="lazy" decoding="async">
-                        <img src="partner-logos/trinasolar.png" alt="Trina Solar" loading="lazy" decoding="async">
+                        <img src="partner-logos/aiko.webp" alt="Aiko Solar" loading="lazy" decoding="async" width="398" height="398">
+                        <img src="partner-logos/alphaess.webp" alt="AlphaESS" loading="lazy" decoding="async" width="398" height="398">
+                        <img src="partner-logos/byd.webp" alt="BYD" loading="lazy" decoding="async" width="398" height="398">
+                        <img src="partner-logos/ecoflow.webp" alt="EcoFlow" loading="lazy" decoding="async" width="400" height="400">
+                        <img src="partner-logos/huawei-logo.webp" alt="Huawei" loading="lazy" decoding="async" width="398" height="398">
+                        <img src="partner-logos/sigenergy.webp" alt="Sigenergy" loading="lazy" decoding="async" width="400" height="400">
+                        <img src="partner-logos/sungrow.webp" alt="Sungrow" loading="lazy" decoding="async" width="400" height="400">
+                        <img src="partner-logos/trinasolar.webp" alt="Trina Solar" loading="lazy" decoding="async" width="398" height="398">
                     </div>
                 </div>
             </div>
@@ -1007,6 +1012,6 @@
     </div>
 
     <!-- JavaScript -->
-    <script src="index.js"></script>
+    <script src="index.js" defer></script>
 </body>
 </html>
